@@ -2,7 +2,7 @@
     Folha de Estido CSS
 */
 /* CSS Reset */
-*{
+* {
     margin: 0;
     border: 0;
     padding: 0;
@@ -11,67 +11,156 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1em;/*Tamanho padrão, equivale a 16px e pode ser redimensionada dinamicamente sem distorções ou quebra de layout*/
+    font-size: 1em;
+    /*Tamanho padrão, equivale a 16px e pode ser redimensionada dinamicamente sem distorções ou quebra de layout*/
 }
 
 /* Layout */
-.Container{
+.Container {
     margin: 0 auto;
     background-color: #7f0;
 }
 
+.Flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: #a9a9a9;
+}
+
 /* Ícone para apontar para o topo do site*/
-#topo{
+#topo {
     position: fixed;
     right: 10px;
     bottom: 10px;
 }
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+#check {
+    display: none;
+}
+
+label {
+    font-size: 3em;
+    padding-right: 15px;
+    top: 60px;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    right: -100%;
+    /*Esconder o menu para abrir somente quandi clicar*/
+    width: 100%;
+    /*Largura do menu*/
+    transition: all 0.5s;
+    /*Efeito de transição quando o menu aparece e some*/
+}
+
+#check:checked~ul {
+    right: 0;
+    /*Mostrar o menu quando clicar no ícone*/
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    /*Remover sublinhado dos links*/
+    color: #fff;
+    /*Cor padrão dos links é azul*/
+}
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 576px){
-    body{
+@media (min-width: 576px) {
+    body {
         background-color: #f0f;
     }
+
     /* Layout */
-    .Container{
+    .Container {
         max-width: 540px;
     }
 }
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 768px){
-    body{
+@media (min-width: 768px) {
+    body {
         background-color: #ff0;
     }
+
     /* Layout */
-    .Container{
+    .Container {
         max-width: 720px;
     }
 }
 
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 992px){
-    body{
+@media (min-width: 992px) {
+    body {
         background-color: #00f;
     }
 
     /* Layout */
-    .Container{
+    .Container {
         max-width: 960px;
     }
 }
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 1200px){
-    body{
+@media (min-width: 1200px) {
+    body {
         background-color: #0ff;
     }
+
     /* Layout */
-    .Container{
+    .Container {
         max-width: 1140px;
+    }
+
+    /* Cabeçalho */
+    header {
+        height: 120px;
+    }
+
+    #logo img {
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: #343538;
+    }
+
+    nav ul li a:hover {
+        color: #c00000;
     }
 }
