@@ -13,20 +13,19 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
     /*Tamanho padrão, equivale a 16px e pode ser redimensionada dinamicamente sem distorções ou quebra de layout*/
+    font-size: 1em;
 }
 
 /* Layout */
 .Container {
-    margin: 0 auto;
-    background-color: #7f0;
+    margin: auto;
 }
 
 .Flex {
     display: flex;
     justify-content: space-between;
-    background-color: #a9a9a9;
+    align-items: center;
 }
 
 /* Ícone para apontar para o topo do site*/
@@ -37,9 +36,15 @@ body {
 }
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* INÍCIO - CABEÇALHO */
+#inicio {
+    background-color: #D1DBF8;
+}
+
 #logo img {
-    width: 128px;
-    height: 128px;
+    width: 269px;
+    height: 50px;
 }
 
 #check {
@@ -48,26 +53,29 @@ body {
 
 label {
     font-size: 3em;
-    padding-right: 15px;
-    top: 60px;
+    position: fixed;
+    top: 5px;
+    right: 15px;
 }
 
 nav ul {
     list-style: none;
     background-color: #343538;
-    height: 100vh;
+    /*Altura de 100% do tamanho da tela independente do dispositivo*/
+    height: 70vh;
     position: fixed;
+    top: 50px;
+    /*Esconder o menu para abrir somente quando clicar*/
     right: -100%;
-    /*Esconder o menu para abrir somente quandi clicar*/
-    width: 100%;
     /*Largura do menu*/
-    transition: all 0.5s;
+    width: 25%;
     /*Efeito de transição quando o menu aparece e some*/
+    transition: all 0.5s;
 }
 
 #check:checked~ul {
-    right: 0;
     /*Mostrar o menu quando clicar no ícone*/
+    right: 0;
 }
 
 nav ul li {
@@ -76,17 +84,83 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     /*Remover sublinhado dos links*/
-    color: #fff;
+    text-decoration: none;
     /*Cor padrão dos links é azul*/
+    color: #fff;
+}
+
+/* PRINCIPAL */
+main {
+    background-color: #D1DBF8;
+    height: 60vh;
+    /*Precisa adicionar imagem*/
+    /*background: url(img/banner.jpg);*/
+    /*Ajustar imagem para o tamanho da tela do dispositivo*/
+    /*background-size: cover;*/
+    /*Cor da fonte se a img for escura*/
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+
+main h2 {
+    font-size: 1em;
+}
+
+/* SOBRE */
+#sobre {
+    height: 40vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* SERVIÇOS */
+#servicos {
+    height: 70vh;
+    background-color: #D1DBF8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* LOCALIZAÇÃO */
+#localizacao {
+    height: 40vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* CONTATO - RODAPÉ */
+#rodape {
+    height: 20vh;
+    background-color: #D1DBF8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
 }
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px) {
-    body {
-        background-color: #f0f;
-    }
+    body {}
 
     /* Layout */
     .Container {
@@ -96,9 +170,7 @@ nav ul li a {
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px) {
-    body {
-        background-color: #ff0;
-    }
+    body {}
 
     /* Layout */
     .Container {
@@ -108,9 +180,7 @@ nav ul li a {
 
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 992px) {
-    body {
-        background-color: #00f;
-    }
+    body {}
 
     /* Layout */
     .Container {
@@ -120,47 +190,124 @@ nav ul li a {
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px) {
-    body {
-        background-color: #0ff;
-    }
+    body {}
 
     /* Layout */
     .Container {
         max-width: 1140px;
     }
 
+    .Flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /*background-color: #00f;*/
+        border: 0px solid #00f;
+        height: 100px;
+    }
+
     /* Cabeçalho */
     header {
-        height: 120px;
+        height: auto;
+        border: 0px solid #0ff;
+    }
+
+    #logo {
+        height: 50px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border: 0px solid #f0f;
     }
 
     #logo img {
-        width: 189px;
-        height: 189px;
-        margin-top: 30px;
+        width: 269px;
+        height: 50px;
     }
 
     label {
         display: none;
     }
 
+    nav {
+        position: static;
+        vertical-align: middle;
+        align-items: center;
+    }
+
     nav ul {
         position: static;
-        height: auto;
         background-color: transparent;
-        margin-top: 50px;
+        margin-top: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     nav ul li {
         float: left;
-        border: 0;
+        padding: 25px;
+        /*        border: 1px solid #00f;*/
+        border-bottom: 0px solid #fff;
+    }
+
+    nav ul li:hover {
+        float: left;
+        padding: 25px;
+        /*        border: 1px solid #00f;*/
+        border-bottom: 0px solid #0F2F82;
     }
 
     nav ul li a {
-        color: #343538;
+        /*color: #fff;
+        content: '';
+        box-shadow: inset 0 0 0 0 #fff;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;*/
+        background-image: linear-gradient(to right,
+                #83a0ff,
+                #83a0ff 50%,
+                #fff 50%);
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline-block;
+        padding: 10px 0;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav ul li a:before {
+        content: '';
+        background: #83a0ff;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
     }
 
     nav ul li a:hover {
-        color: #c00000;
+        /*color: #0F2F82;
+        border-bottom: 2px solid #0F2F82;
+        content: '';
+        box-shadow: inset 100px 0 0 0 #0F2F82;
+        color: white;*/
+        background-position: 0;
+    }
+
+    nav ul li a:hover::before {
+        width: 100%;
+    }
+
+    /* LOCALIZAÇÃO */
+    #localizacao iframe {
+        width: 800px;
+        height: 350px;
     }
 }
