@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
@@ -24,8 +28,7 @@ body {
 
 .Flex {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 /* Ícone para apontar para o topo do site*/
@@ -38,8 +41,14 @@ body {
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 /* INÍCIO - CABEÇALHO */
-#inicio {
+header {
     background-color: #D1DBF8;
+    height: 100px;
+}
+
+#logo {
+    height: 50px;
+    align-self: center;
 }
 
 #logo img {
@@ -47,46 +56,31 @@ body {
     height: 50px;
 }
 
-#check {
-    display: none;
-}
-
-label {
-    font-size: 3em;
-    position: fixed;
-    top: 5px;
-    right: 15px;
+nav {
+    position: static;
+    vertical-align: middle;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
-    background-color: #343538;
-    /*Altura de 100% do tamanho da tela independente do dispositivo*/
-    height: 70vh;
-    position: fixed;
-    top: 50px;
-    /*Esconder o menu para abrir somente quando clicar*/
-    right: -100%;
-    /*Largura do menu*/
-    width: 25%;
-    /*Efeito de transição quando o menu aparece e some*/
-    transition: all 0.5s;
-}
-
-#check:checked~ul {
-    /*Mostrar o menu quando clicar no ícone*/
-    right: 0;
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 nav ul li {
-    padding: 20px;
-    border-bottom: 1px solid #a9a9a9;
+    padding: 10px;
 }
 
 nav ul li a {
     /*Remover sublinhado dos links*/
     text-decoration: none;
-    /*Cor padrão dos links é azul*/
+    /*Cor padrão dos links é azul, vou deixar branco*/
     color: #fff;
 }
 
@@ -138,13 +132,18 @@ main h2 {
 
 /* LOCALIZAÇÃO */
 #localizacao {
-    height: 40vh;
+    height: 80vh;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 
+}
+
+#localizacao iframe {
+    width: 375px;
+    height: 450px;
 }
 
 /* CONTATO - RODAPÉ */
@@ -160,7 +159,6 @@ main h2 {
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px) {
-    body {}
 
     /* Layout */
     .Container {
@@ -170,7 +168,6 @@ main h2 {
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px) {
-    body {}
 
     /* Layout */
     .Container {
@@ -180,7 +177,6 @@ main h2 {
 
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 992px) {
-    body {}
 
     /* Layout */
     .Container {
@@ -190,7 +186,6 @@ main h2 {
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px) {
-    body {}
 
     /* Layout */
     .Container {
@@ -198,7 +193,7 @@ main h2 {
     }
 
     .Flex {
-        display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
         /*background-color: #00f;*/
@@ -216,12 +211,6 @@ main h2 {
         height: 50px;
         margin-top: 0px;
         margin-bottom: 0px;
-        border: 0px solid #f0f;
-    }
-
-    #logo img {
-        width: 269px;
-        height: 50px;
     }
 
     label {
@@ -275,6 +264,7 @@ main h2 {
         display: inline-block;
         padding: 10px 0;
         position: relative;
+        background-clip: inherit;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: all 0.3s ease-in-out;
@@ -306,8 +296,12 @@ main h2 {
     }
 
     /* LOCALIZAÇÃO */
+    #localizacao {
+        height: 50vh;
+    }
+
     #localizacao iframe {
-        width: 800px;
+        width: 1140px;
         height: 350px;
     }
 }
