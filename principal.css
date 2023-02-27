@@ -1,0 +1,56 @@
+/*
+    Folha de Estido CSS
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Variáveis */
+:root {
+    --cor-background-1: #FFF;
+    --cor-background-2: #D1DBF8;
+    --cor1: #FFF;
+    --cor2: #D1DBF8;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*Tamanho padrão, equivale a 16px e pode ser redimensionada dinamicamente sem distorções ou quebra de layout*/
+    font-size: 1em;
+}
+
+/* Layout */
+.Container {
+    margin: auto;
+}
+
+.Flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.Titulo {
+    font-size: 1.7em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Ícone para apontar para o topo do site*/
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}

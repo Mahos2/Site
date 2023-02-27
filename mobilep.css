@@ -1,0 +1,140 @@
+/*
+    Folha de Estido CSS
+*/
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Importa o arquivo de estilo principal contendo todo o estilo em comum para todos os tipos de tela*/
+@import url('principal.css');
+
+/* ==================== CABEÇALHO ==================== */
+header {
+    background-color: var(--cor-background-2);
+    height: 100px;
+}
+
+#logo {
+    height: 50px;
+    align-self: center;
+}
+
+#logo img {
+    width: 269px;
+    height: 50px;
+}
+
+nav {
+    position: static;
+    vertical-align: middle;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    /*Remover sublinhado dos links*/
+    text-decoration: none;
+    /*Cor padrão dos links é azul, vou deixar branco*/
+    color: #fff;
+}
+
+/* ==================== PRINCIPAL ==================== */
+
+.Principal {
+    background-color: var(--cor-background-2);
+    height: 75vh;
+    color: var(--cor1);
+    /*Precisa adicionar imagem*/
+    /*background: url(img/banner.jpg);*/
+    /*Ajustar imagem para o tamanho da tela do dispositivo*/
+    /*background-size: cover;*/
+    /*Cor da fonte se a img for escura*/
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+
+main h2 {
+    font-size: 1em;
+}
+
+/* ==================== SOBRE ==================== */
+.Sobre {
+    background-color: var(--cor-background-1);
+    padding: 5vw;
+}
+
+#sobre h3 {
+    font-size: 1.1em;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* ==================== SERVIÇOS ==================== */
+#servicos {
+    /* height: 70vh; */
+    background-color: var(--cor-background-2);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; */
+
+}
+
+#servicos p{
+    font-size: 0.8em;
+}
+
+/* ==================== LOCALIZAÇÃO ==================== */
+.Localizacao {
+    /* height: 80vh; */
+    background-color: var(--cor-background-1);
+    margin-bottom: 30px;
+}
+
+/* .Map-responsive {
+    width: 375px;
+} */
+
+#localizacao iframe {
+    width: 100vw;
+    height: 60vh;
+}
+
+#localizacao h3 {
+    font-size: 1.5em;
+}
+
+#localizacao h4 {
+    font-size: 1.0em;
+}
+
+#localizacao h4 span {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* ==================== CONTATO - RODAPÉ ==================== */
+#rodape {
+    height: 20vh;
+    background-color: var(--cor-background-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}

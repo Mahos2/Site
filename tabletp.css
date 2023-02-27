@@ -1,0 +1,10 @@
+/*
+    Folha de Estido CSS
+*/
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Layout */
+.Container {
+    max-width: 720px;
+}
