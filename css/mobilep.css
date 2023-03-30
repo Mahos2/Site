@@ -10,10 +10,11 @@
 /* ==================== CABEÇALHO ==================== */
 header {
     background-color: var(--cor-background-2);
-    height: 100px;
+    height: 120px;
 }
 
 #logo {
+    margin-top: 20px;
     height: 50px;
     align-self: center;
 }
@@ -69,13 +70,18 @@ main h1 {
 }
 
 main h2 {
-    font-size: 1em;
+    font-size: 2em;
 }
 
 /* ==================== SOBRE ==================== */
 .Sobre {
     background-color: var(--cor-background-1);
     padding: 5vw;
+}
+
+#sobre h2 {
+    text-align: center;
+    position: relative;
 }
 
 #sobre h3 {
@@ -95,7 +101,7 @@ main h2 {
 
 }
 
-#servicos p{
+#servicos p {
     font-size: 0.8em;
 }
 
@@ -117,10 +123,12 @@ main h2 {
 
 #localizacao h3 {
     font-size: 1.5em;
+    margin-top: 10px;
 }
 
 #localizacao h4 {
     font-size: 1.0em;
+    margin-top: 10px;
 }
 
 #localizacao h4 span {

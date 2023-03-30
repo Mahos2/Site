@@ -48,6 +48,27 @@ body {
     margin-bottom: 30px;
 }
 
+.Underline {
+    width: 45%;
+    height: 2px;
+    background-color: var(--cor2);
+    position: relative;
+    bottom: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.UnderlineL {
+    bottom: 30px;
+}
+
+hr {
+    width: 20%;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+
 /* Ícone para apontar para o topo do site*/
 #topo {
     position: fixed;
