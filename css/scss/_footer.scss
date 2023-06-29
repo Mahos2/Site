@@ -1,0 +1,29 @@
+/* ==================== RODAPÉ ==================== */
+footer {
+    .Container {
+        @extend .Flex;
+        min-height: 4vh;
+    }
+}
+
+#rodape {
+    height: 20vh;
+    background-color: $color-1;
+    // color: $color-3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Importa o arquivo de estilo para dispositivos móveis portrait*/
+@include mqu(s){
+    #rodape {
+        color: $color-3;
+    }
+}
+@include mqd(s){
+    #rodape {
+        color: $color-2;
+    }
+}

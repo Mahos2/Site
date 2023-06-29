@@ -9,22 +9,21 @@
     <!-- "Sheyla Veloso é Psicopedagoga, e atua nas dificuldades e transtornos de aprendizagem" - Tem 84 - Max 155 caracteres incluindo espaços-->
     <meta name="description" content="Sheyla Veloso é Psicopedagoga e atua nas dificuldades e transtornos de aprendizagem, para que crianças e
     adolescentes desenvolvam autonomia nos estudos."><!--Tem 152 - Max 155 caracteres incluindo espaços-->
-    <link rel="icon" href=""><!--Icone de favoritos "favicon" - que aparece ao lado do título na aba do navegador-->
-    <link rel="stylesheet" href="css/style.css" class="css">
-    <link rel="stylesheet" href="css/principal.css" class="css">
-    <!--Linha temporária porque o live server não está funcionando com imports no CSS-->
-    <link rel="stylesheet" href="css/mobilep.css" class="css">
-    <!--Linha temporária porque o live server não está funcionando com imports no CSS-->
+    <link rel="icon" href="img/favicon.ico">
+    <!--Icone de favoritos "favicon" - que aparece ao lado do título na aba do navegador-->
+    <!-- <link rel="stylesheet" href="css/style.css" class="css"> -->
+    <link rel="stylesheet" href="css/main.css" class="css">
+    <script src="js/main.js" defer></script>
+    <script src="js/rodape.js" defer></script>
     <!-- CSS do Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- JS do Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
     <header id="inicio">
-        <div class="Container Flex">
+        <div class="Container Flex-Header">
             <div id="logo">
                 <img src="img/cropped-LOGO.png" alt="Psicopedagoga">
             </div>
@@ -32,7 +31,7 @@
                 <!--<input type="checkbox" id="check">
                 <label for="check">&#x268c;
                 </label><!--caractere unicode do ícone hamburger para menu associado ao checkbox-->
-                <ul>
+                <ul class="Lista-Header">
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#localizacao">Localização</a></li>
@@ -134,24 +133,28 @@
     </section>
     <section id="localizacao">
         <div class="Container Flex Localizacao">
-            <h2 class="Titulo">LOCALIZAÇÃO</h2>
-            <div class="Underline UnderlineL"></div>
+            <div id="tituloLoc">
+                <h2>LOCALIZAÇÃO</h2>
+                <div class="Underline UnderlineL"></div>
+            </div>
             <div class="Map-responsive">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7234.888519787602!2d-53.46621557243074!3d-24.9509953!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ac477dc169dde9%3A0x19b65afc07fe6b08!2sSheyla%20Veloso%2C%20Psicopedagoga!5e0!3m2!1spt-BR!2sbr!4v1676307842049!5m2!1spt-BR!2sbr"
                     style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+                <!-- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d226.0902994275945!2d-53.46193062186684!3d-24.95097722531993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ac477dc169dde9%3A0x19b65afc07fe6b08!2sSheyla%20Veloso%2C%20Psicopedagoga!5e0!3m2!1spt-BR!2sbr!4v1687551279148!5m2!1spt-BR!2sbr" -->
             </div>
-            <h3>Omni Coworking</h3>
-            <h4>Rua Pres. Kennedy, 481, Centro,<br> Cascavel - PR, 85810-040
-                <br><br>
-                <span>Procurar por Psicopedagoga Sheyla Veloso</span>
-            </h4>
+            <div id="descLoc" class="Container Flex">
+                <h3>Omni Coworking</h3>
+                <h4>Rua Pres. Kennedy, 481 - Centro,<br> Cascavel - PR, 85810-040</h4>
+                <h5><span>Procurar por Psicopedagoga Sheyla Veloso</span></h5>
+            </div>
         </div>
     </section>
     <footer id="rodape">
         <div class="Container">
             <h2 class="Titulo">CONTATO</h2>
+            <h5>© <span id="ano"></span> – Sheyla Veloso. Todos os direitos reservados.</h5>
         </div>
     </footer>
     <a href="#inicio" id="topo"><img src="img/topo.svg" alt="topo do site"></a>

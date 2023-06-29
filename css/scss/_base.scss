@@ -1,0 +1,64 @@
+/*
+    Folha de Estido CSS
+*/
+
+/* Google Fonts */
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Variáveis */
+$color-1: #D1DBF8;
+$color-2: #83a0ff;
+$color-3: #fff;
+$text-color: rgb(255, 255, 255);
+$button-color: #ff0;
+$button-text-color: #222;
+
+/* CSS Reset */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    // align-self: center;
+    // align-items: center;
+    // align-content: center;
+    // text-align: center;
+    // justify-self: center;
+    // justify-content: center;
+    // justify-items: center;
+    // vertical-align: middle;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: $color-1;
+    color: $text-color;
+    text-align: center;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*Tamanho padrão, equivale a 16px e pode ser redimensionada dinamicamente sem distorções ou quebra de layout*/
+    font-size: 1em;
+    background-color: $color-1;
+}
+
+/* Ícone para apontar para o topo do site*/
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* Layout */
+.Container {
+    margin: auto;
+}
+
+.Flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}

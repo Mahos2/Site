@@ -1,0 +1,37 @@
+/* ==================== RESPONSIVO ==================== */
+@use 'sass:map';
+
+$breakpoints: (
+    s : 576px,
+    m : 768px,
+    l : 992px,
+    xl : 1200px
+);
+
+@mixin mqu($key) {
+    @if map.has-key($breakpoints, $key) {
+        $size : map.get($breakpoints, $key);
+
+        @media (min-width: $size) {
+            @content;
+        }
+    } @else {
+        @media (min-width: #{$key}px) {
+            @content;
+        }
+    }
+}
+
+@mixin mqd($key) {
+    @if map.has-key($breakpoints, $key) {
+        $size : map.get($breakpoints, $key)-1;
+
+        @media (max-width: $size) {
+            @content;
+        }
+    } @else {
+        @media (max-width: #{($key)-1}px) {
+            @content;
+        }
+    }
+}

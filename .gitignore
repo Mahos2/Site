@@ -1,0 +1,6 @@
+*.css
+main.css.map
+!main.css
+*.jpg
+cropped-LOGO_TESTE.png
+Site.code-workspace
